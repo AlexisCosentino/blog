@@ -1,15 +1,11 @@
-<?php 
-echo "hello world";
+<?php
 
+echo "hello world";
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $routes = [
-/*    'hello' => 'pages/hello.php',
-    'portfolio' => 'pages/portfolio.php',
-    'loisir' => 'pages/loisir.php',
-    'parcours' => 'pages/parcours.php',
-    'contact' => 'pages/contact.php',
-    'error' => 'pages/error.php',   */
+    'database' => 'config/database.php',
+
 ];
 
 /** @define "$routes" "/" */
@@ -23,7 +19,7 @@ if (isset($action)) {
         echo $buffer;
     }
 } else {
-    require $routes['hello'];
+    require $routes['index.php'];
 }
 
-
+include $routes['database'];
