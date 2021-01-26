@@ -7,6 +7,7 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $routes = [
     'database' => 'config/database.php',
     'index' => 'app/controllers/homeController.php',
+    'blogpost' => 'app/controllers/blogPostController.php',
 ];
 
 /** @define "$routes" "/" */
