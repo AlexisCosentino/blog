@@ -1,4 +1,6 @@
 <?php
+error_reporting (E_ALL);
+ini_set('display_errors', true);
 
 $page = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $routes = [
@@ -7,6 +9,9 @@ $routes = [
 ];
 
 /** @define "$routes" "/" */
+
+require $routes['database'];
+
 
 if (isset($page)) {
     if (array_key_exists($page, $routes)) {
@@ -20,4 +25,3 @@ if (isset($page)) {
     require $routes['index'];
 }
 
-include $routes['database'];
