@@ -78,5 +78,5 @@
 </header>
 
 <main>
-    <div class="container" style="background-color: #ffcbcb">
+    <div class="container pt-5 pb-5" style="background-color: #ffcbcb">
 

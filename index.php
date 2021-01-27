@@ -8,6 +8,7 @@ $routes = [
     'database' => 'config/database.php',
     'index' => 'app/controllers/homeController.php',
     'blogpost' => 'app/controllers/blogPostController.php',
+    'blogpostcreate' => 'app/controllers/blogPostCreateController.php',
 ];
 
 /** @define "$routes" "/" */

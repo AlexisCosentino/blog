@@ -19,5 +19,10 @@ function commentsByBlogPost(PDO $pdo, $posts_id) : array
     return $result -> fetchAll();
 }
 
+function blogPostCreate(PDO $pdo, $createTitle, $createText, $createdateB, $createdateE, $createImportant, $authors_id) : array
+{
+    $result = $pdo ->query("insert into posts (title, text, important, authors_id) value ($createTitle, $createText, $createdateB, $createdateE, $createImportant, $authors_id)");
+    return $result -> fetch(PDO::FETCH_ASSOC);
+}
 
 //select posts.title, posts.text, authors.name, authors.firstname from posts inner join authors ON posts.authors_id = authors.id order by posts.date_begin limit 10
