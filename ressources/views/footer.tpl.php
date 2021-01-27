@@ -1,6 +1,5 @@
 <?php
 
-echo "Je suis ton Footer";
 
 ?>
 
@@ -45,3 +44,4 @@ echo "Je suis ton Footer";
 
 </body>
 </html>
+
