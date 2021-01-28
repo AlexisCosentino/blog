@@ -9,6 +9,7 @@ $routes = [
     'index' => 'app/controllers/homeController.php',
     'blogpost' => 'app/controllers/blogPostController.php',
     'blogpostcreate' => 'app/controllers/blogPostCreateController.php',
+    'error' => 'ressources/views/errors/error.php',
 ];
 
 /** @define "$routes" "/" */
@@ -21,7 +22,7 @@ if (isset($action)) {
         require $routes[$action];
     } else {
         header("HTTP/1.0 404 Not Found");
-        require $action['error'];
+        require $routes['error'];
     }
 } else {
     require $routes['index'];

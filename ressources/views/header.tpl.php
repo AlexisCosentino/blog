@@ -39,19 +39,23 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="/index.php?page=hello">Accueil</a>
+                                   href="index.php">Accueil</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="/index.php?page=portfolio">Blog</a>
+                                   href="index.php?action=blogpost&id=1">Articles</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="/index.php?page=loisir">Auteurs</a>
+                                   href="index.php?action=blogpostcreate">Creer un article</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="/index.php?page=contact">Contact</a>
+                                   href="index.php?action=blogpostcreate">Modifier un article</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
+                                   href="index.php?action=blogpostcreate">Supprimer un article</a>
                             </li>
                         </ul>
                     </div>
