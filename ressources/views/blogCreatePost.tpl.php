@@ -2,6 +2,11 @@
 require 'header.tpl.php';
 ?>
 
+<?php if (isset($inputs['submit'])) : ?>
+    <h2 class="text-success"> Votre article à bien été créé mon gars !</h2>
+<?php else : ?>
+
+<h4 class="pb-5">Votre article sera créé et son incrémentation pour l'ID sera automatique</h4>
 
 <form action="index.php?action=blogpostcreate" method="POST" class="form-example">
     <div class="form-example">
@@ -59,6 +64,8 @@ require 'header.tpl.php';
         <input type="submit" value="Envoyer" name="submit">
     </div>
 </form>
+
+<?php endif ?>
 
 <?php
 require 'footer.tpl.php';

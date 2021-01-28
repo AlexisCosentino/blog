@@ -5,8 +5,8 @@ require 'app/persistences/blogPostData.php';
 
 $inputs = filter_input_array(INPUT_POST, $_POST); //Filtre de validation avec les valeurs du tableau parameters
 
-//Faire en sorte aue si le formulaire est ok je fais la fonction, sinon je charge le formulaire
-if (isset($inputs['title'])){
+//Faire en sorte aue si le formulaire est envoyé je fais la fonction, sinon/ensuite je charge le formulaire
+if (isset($_POST['submit'])){
     blogPostCreate($pdo, $inputs['title'], $inputs['text'],  $inputs['date_begin'], $inputs['date_end'], $inputs['important'], $inputs['author']);
 }
 

@@ -21,6 +21,8 @@ echo "Aucun commetnaire sur ce sujet";
 */
 ?>
 
+<h4 class="pb-5">Pour lire un article en particulier, merci de rentrer un id dans l'URI</h4>
+
 <article class="blogpost">
     <header>
         <h3> <?=$postById['title']?></h3>

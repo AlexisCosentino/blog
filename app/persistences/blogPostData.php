@@ -39,4 +39,29 @@ function blogPostCreate(PDO $pdo, $title, $text, $datebegin, $dateend, $importan
 }
 
 
-    //$result = $pdo ->query("insert into posts (title, text, date_begin, date_end, important, authors_id) value ('$title', '$text', '$datebegin', '$dateend', '$important', '$author')");
+
+
+
+
+//function pour afficher les anciennes données de l'article avant l'update
+function blogPostUpdateBefore(PDO $pdo, $modify_id) : array
+{
+    $result = $pdo->query("select title, text, date_begin, date_end, important, authors_id from posts where id = $modify_id");
+    return $result->fetch(PDO::FETCH_ASSOC);
+}
+
+
+
+//Fonction pour envoyer les nouvelles données après update
+function blogPostUpdate(PDO $pdo, $title, $text, $datebegin, $dateend, $important, $author, $modify_id) : bool
+{
+$result = $pdo->query("update posts
+set title = '$title',
+text = '$text',
+date_begin='$datebegin',
+date_end = '$dateend',
+important = '$important',
+authors_id = '$author'
+where posts.id = $modify_id");
+return $result->fetch(PDO::FETCH_ASSOC);
+}

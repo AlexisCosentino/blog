@@ -51,7 +51,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="index.php?action=blogpostcreate">Modifier un article</a>
+                                   href="index.php?action=blogpostmodify&id=1">Modifier un article</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"

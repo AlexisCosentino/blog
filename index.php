@@ -9,6 +9,7 @@ $routes = [
     'index' => 'app/controllers/homeController.php',
     'blogpost' => 'app/controllers/blogPostController.php',
     'blogpostcreate' => 'app/controllers/blogPostCreateController.php',
+    'blogpostmodify' => 'app/controllers/blogPostModifyController.php',
     'error' => 'ressources/views/errors/error.php',
 ];
 
