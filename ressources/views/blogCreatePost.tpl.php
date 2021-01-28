@@ -1,26 +1,9 @@
 <?php
-
-if (isset($_POST['submit'])) {
-    $parameters = array(
-        'title' => FILTER_SANITIZE_STRING,
-        'text' => FILTER_SANITIZE_STRING,
-        'date_begin',
-        'date_end',
-        'important' => FILTER_SANITIZE_STRING,
-        'auteur' => FILTER_SANITIZE_STRING,
-
-    );
-    $form = true;
-} else {
-    $form = false;
-}
-
-
 require 'header.tpl.php';
 ?>
 
 
-<form action="index.php?action=blogCreatePost" method="POST" class="form-example">
+<form action="index.php?action=blogpostcreate" method="POST" class="form-example">
     <div class="form-example">
         <label for="title">Titre de l'article</label>
         <input type="text" name="title" id="title" required>
@@ -29,18 +12,6 @@ require 'header.tpl.php';
     <div class="form-example">
         <label for="text">Texte de l'article </label>
         <input type="text" name="text" id="text" required>
-    </div>
-
-    <div class="form-example">
-        <label for="important">Importance de 1 à 5 :</label>
-        <select name="important" id="important">
-            <option value="">--Choisissez--</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
     </div>
 
     <div class="form-example">
@@ -57,6 +28,18 @@ require 'header.tpl.php';
         <input type="date" id="start" name="date_end"
                value="2021-01-27"
                min="2021-01-01" max="2022-12-31">
+    </div>
+
+    <div class="form-example">
+        <label for="important">Importance de 1 à 5 :</label>
+        <select name="important" id="important">
+            <option value="">--Choisissez--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
     </div>
 
     <div class="form-example">
