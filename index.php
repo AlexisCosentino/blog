@@ -10,6 +10,8 @@ $routes = [
     'blogpost' => 'app/controllers/blogPostController.php',
     'blogpostcreate' => 'app/controllers/blogPostCreateController.php',
     'blogpostmodify' => 'app/controllers/blogPostModifyController.php',
+    'blogpostdeletelist' => 'app/controllers/blogPostDeleteController.php',
+    'blogpostdelete' => 'app/controllers/blogPostDeleteController.php',
     'error' => 'ressources/views/errors/error.php',
 ];
 

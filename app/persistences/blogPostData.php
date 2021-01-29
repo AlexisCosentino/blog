@@ -60,3 +60,20 @@ authors_id = '$author'
 where posts.id = $modify_id");
 return $result->fetch(PDO::FETCH_ASSOC);
 }
+
+
+//Montrer les titre de touts les articles
+function ShowPostsTitle(PDO $pdo) : array
+{
+    $result = $pdo->query('select title, id from posts');
+    return $result->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+
+//Supprimer un article
+function blogPostDelete(PDO $pdo, $postid)
+{
+    $result = $pdo->query("delete from posts where id = $postid");
+}

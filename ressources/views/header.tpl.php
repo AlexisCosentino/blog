@@ -55,7 +55,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="index.php?action=blogpostcreate">Supprimer un article</a>
+                                   href="index.php?action=blogpostdeletelist">Supprimer un article</a>
                             </li>
                         </ul>
                     </div>
